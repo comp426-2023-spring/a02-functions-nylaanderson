@@ -2,6 +2,8 @@
 
 import minimist from 'minimist';
 
+import moment from 'moment-timezone';
+
 cont args = minimist(process.argv.slice(2));
 
 if (args.h) {
@@ -15,7 +17,30 @@ if (args.h) {
 	process.exit(0);
 }
 
+const timezone = moment.tz.guess();
+let latitude;
+let longitude;
 
+
+if (args.z) {
+	timezone = args.z
+}
+
+if (args.n) {
+	latitude = args.n
+}
+
+if (args.s) {
+	latitude = -args.s
+}
+
+if (args.e) {
+	longitude = args.e
+}
+
+if (args.w) {
+	longitude = -args.w
+}
 
 
 
