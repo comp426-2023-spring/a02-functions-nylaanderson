@@ -20,7 +20,7 @@ if (args.h) {
 const timezone = moment.tz.guess();
 let latitude;
 let longitude;
-
+const days = args.d
 
 if (args.z) {
 	timezone = args.z
@@ -48,7 +48,29 @@ const response = await fetch(''https://api.open-meteo.com/v1/forecast?latitude='
 
 const data = await response.json();
 
-
+if (days == 0) {
+	(console.log("today.")
+	if(data.precipitation_hours[0] > 0) {
+		console.log("You might need your galoshes")
+	}
+	else{
+		console.log("You will not need your galoshes")
+	}
+} else if (days > 1) {
+	console.log("in " + days + " days.")
+	if(data.precipitation_hours[days] > 0) {
+		console.log("You might need your galoshes")
+	} else{
+		console.log("You will not need your galoshes"
+	} 	
+} else { 
+	console.log("tomorrow.")
+	if(data.precipitation_hours[1] > 0) {
+		console.log("You might need your galoshes")
+	} else{
+		console.log("You will not need your galoshes")
+	}
+}
 
 
 
