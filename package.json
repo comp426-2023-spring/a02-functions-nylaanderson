@@ -2,7 +2,7 @@
   "name": "functions",
   "version": "1.0.0",
   "description": "\"ingests API data from Open-Meteo\"",
-  "main": "cli.js",
+  "main": "index.js",
   "scripts": {
     "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
   },
