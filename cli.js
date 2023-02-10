@@ -48,6 +48,12 @@ const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude='+
 
 const data = await response.json();
 
+
+if (args.j) {
+        console.log(data);
+        process.exit(0);
+}
+
 if (days == 0) {
 	(console.log("today.")
 	if(data.precipitation_hours[0] > 0) {
