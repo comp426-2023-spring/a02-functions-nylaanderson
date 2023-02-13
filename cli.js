@@ -33,12 +33,8 @@ var latitude = args.n || (args.s * -1);
  
 var longitude = args.e || (args.w * -1); 
 
-if (args.e) {
-	longitude = args.e
-}
-
-if (!latitude && !longitude){
-	console.log("Values must be in range");
+if(!latitude && !longitude){
+	console.log("Error location invalid");
 	process.exit(0);
 }
 
