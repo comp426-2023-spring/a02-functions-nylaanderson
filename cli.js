@@ -33,7 +33,7 @@ var latitude = args.n || (args.s * -1);
  
 var longitude = args.e || (args.w * -1); 
 
-if(!latitude && !longitude || latitude > 90 || latitdue < -90 || longitude > 90 || longitude < -90){
+if(!latitude && !longitude){
 	console.log("Error location invalid");
 	process.exit(0);
 }
