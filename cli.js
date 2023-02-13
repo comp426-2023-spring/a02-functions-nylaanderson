@@ -40,7 +40,7 @@ if(!latitude && !longitude){
 
 //Make a request
 
-var response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&daily=precipitation_hours'+ '&timezone=' + timezone);
+var response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude + '&daily=precipitation_hours&current_weather=true'+ '&timezone=' + timezone);
 const data = await response.json();
 
 
